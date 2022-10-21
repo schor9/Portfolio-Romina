@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html{
+  scroll-behavior: smooth;
+}
 * {
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
@@ -11,6 +15,7 @@
 body {
   margin: 0;
   padding: 0;
+  min-height: 100vh;
 }
 
 h1{
@@ -30,149 +35,143 @@ img {
   max-width: 100%;
   height: auto;
 }
+nav{
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  height: 100px;
+  background-color: #010326;
+
+}
 
 /*Navbar*/
-.navbar {
-  display: flex;
-  position: relative;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #010326;
-  color: #6FBFBF;
-  font-size: 20px;
-  font-weight: bold;
-
-
+nav .logo {
+	float: left;
+	width: 40%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	font-size: 24px;
+	color: #6FBFBF;
 }
-
-.brand-title {
-  max-width: 100%;
-  height: auto;
-  font-size: 1.5rem;
-  margin: .5rem;
-  
+nav .links {
+	float: right;
+	padding: 0;
+	margin: 0;
+	width: 60%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
-
-.navbar-links {
-  height: 100%;
+nav .links li {
+	list-style: none;
 }
-
-.navbar-links ul {
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar-links li {
-  list-style: none;
-}
-
-.navbar-links li a {
-  display: block;
-  text-decoration: none;
-  color: #6FBFBF;
-  padding: 1rem;
-}
-
-.navbar-links li:hover {
-  background-color: #393E59;
+nav .links a {
+	display: block;
+	padding: 0.75em;
+	font-size: 16px;
+	font-weight: bold;
+	color: #6FBFBF;
+	text-decoration: none;
   border-radius: 20px;
+  background-color: #393E59;
 }
-
-.toggle-button {
-  position: absolute;
-  top: .75rem;
-  right: 1rem;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
+#nav-toggle {
+	position: absolute;
+	top: -100px;
 }
-
-.toggle-button .bar {
-  height: 3px;
-  width: 100%;
-  background-color: #6FBFBF;
-  border-radius: 10px;
+nav .icon-burger {
+	display: none;
+	position: absolute;
+	right: 5%;
+	top: 50%;
+	transform: translateY(-50%);
 }
-
-@media (max-width: 560px) {
-  .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-  }
-
-  .toggle-button {
-      display: flex;
-  }
-
-  .navbar-links {
-      display: none;
-      width: 100%;
-  }
-
-  .navbar-links ul {
-      width: 100%;
-      flex-direction: column;
-  }
-
-  .navbar-links ul li {
-      text-align: center;
-  }
-
-  .navbar-links ul li a {
-      padding: .5rem 1rem;
-  }
-
-  .navbar-links.active {
-      display: flex;
-  }
+nav .icon-burger .line {
+	width: 30px;
+	height: 5px;
+	background-color: #6FBFBF;
+	margin: 5px;
+	border-radius: 3px;
+	transition: all .3s ease-in-out;
 }
-
+@media screen and (max-width: 768px) {
+	nav .logo {
+		float: none;
+		width: auto;
+		justify-content: center;
+	}
+	nav .links {
+		float: none;
+		position: fixed;
+		z-index: 9;
+		left: 0;
+		right: 0;
+		top: 100px;
+		bottom: 100%;
+		width: auto;
+		height: auto;
+		flex-direction: column;
+		justify-content: space-evenly;
+		
+		overflow: hidden;
+		box-sizing: border-box;
+		transition: all .5s ease-in-out;
+	}
+	nav .links a {
+		font-size: 20px;
+	}
+	nav :checked ~ .links {
+		bottom: 0;
+	}
+	nav .icon-burger {
+		display: block;
+	}
+	nav :checked ~ .icon-burger .line:nth-child(1) {
+		transform: translateY(10px) rotate(225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(3) {
+		transform: translateY(-10px) rotate(-225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(2) {
+		opacity: 0;
+	}
+	
+}
 /*Titel*/
-.ml11 {
-  font-weight: 700;
-  font-size: 6em;
-  
+.ml9 {
+  position: relative;
+  font-weight: 200;
+  font-size: 4em;
 }
 
-.ml11 .text-wrapper {
+.ml9 .text-wrapper {
   position: relative;
   display: inline-block;
-  padding-top: 0.1em;
+  padding-top: 1.5em;
   padding-right: 0.05em;
-  padding-bottom: 0.15em;
-
+  padding-bottom: 0.1em;
+  overflow: hidden;
 }
 
-.ml11 .line {
-  opacity: 0;
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: 3px;
-  background-color: #fff;
-  transform-origin: 0 50%;
-}
-
-.ml11 .line1 { 
-  top: 0; 
-  left: 0;
-}
-
-.ml11 .letter {
+.ml9 .letter {
+  transform-origin: 50% 100%;
   display: inline-block;
   line-height: 1em;
 }
 
-@media (max-width: 950px) {
-  .ml11 {
-      font-size: 40px;
-      
-  }
+@media screen and (max-width: 628px) {
+.ml9{
+  width: auto;
+  justify-content: center;
+  font-size: 40px;
+  padding-top: 0.5em;
 }
-
+}
 
 /*Skills*/
 
@@ -227,9 +226,9 @@ img {
 #html-bar{
   animation: html-fill 2s forwards;
 }
-@keyframes html-fill{
+@keyframes html-fill{ 
   100%{
-      width: 60%;
+      width: 80%;
   }
 }
 
@@ -260,7 +259,123 @@ img {
   }
 }
 
+#python-bar{
+  animation: python-fill 2s forwards;
+}
+@keyframes python-fill{
+  100%{
+      width: 60%;
+  }
+}
+
 /*Ueber Mich*/
+/* Timeline Container */
+.timeline {
+  margin: 20px;
+  padding: 20px;
+  justify-content: center;
+  display: flex;
+}
+
+/* Card container */
+.card {
+  position: relative;
+  max-width: 400px;
+}
+
+/* setting padding based on even or odd */
+.card:nth-child(odd) {
+  padding: 30px 0 30px 30px;
+}
+.card:nth-child(even) {
+  padding: 30px 30px 20px 0;
+  
+}
+/* Global ::before */
+.card::before {
+  content: "";
+  position: absolute;
+  border: solid;
+}
+
+/* Setting the border of top, bottom, left */
+.card:nth-child(odd)::before {
+  left: 0px;
+  top: -4.5px;
+  bottom: -4.5px;
+  border-width: 5px 0 5px 5px;
+  border-radius: 50px 0 0 50px;
+  width: calc(86% + 3px);
+}
+
+/* Setting the border of top, bottom, right */
+.card:nth-child(even)::before {
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-width: 5px 5px 5px 0;
+  border-radius: 0 50px 50px 0;
+  width: calc(86% + 7px);
+}
+
+/* Removing the border if it is the first card */
+.card:first-child::before {
+  border-top: 0;
+  border-top-left-radius: 0;
+}
+
+/* Removing the border if it is the last card  and it's odd */
+.card:last-child:nth-child(odd)::before {
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* Removing the border if it is the last card  and it's even */
+.card:last-child:nth-child(even)::before {
+  border-bottom: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Information about the timeline */
+.info {
+  display: flex;
+  flex-direction: column;
+  color: #6FBFBF;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Title of the card */
+.title {
+  color: #6FBFBF;
+  position: relative;
+}
+
+/* Timeline dot  */
+.title::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #393E59;
+  border-radius: 999px;
+  border: 3px solid;
+}
+
+/* text right if the card is even  */
+.card:nth-child(even) > .info > .title {
+  text-align: right;
+}
+
+/* setting dot to the left if the card is odd */
+.card:nth-child(odd) > .info > .title::before {
+  left: -45px;
+}
+
+/* setting dot to the right if the card is odd */
+.card:nth-child(even) > .info > .title::before {
+  right: -45px;
+}
 
 /*Kontakt*/
 form .half{
