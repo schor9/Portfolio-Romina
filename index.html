@@ -7,6 +7,13 @@
     <title>Romina Schöpfer</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('ekiauM9eOgLz_Acse');
+        })();
+    </script>
 
 </head>
 <body>
@@ -18,7 +25,7 @@
       <li><a href="#">HOME</a></li>
       <li><a href="#about">ÜBER MICH</a></li>
       <li><a href="#skills">SKILLS</a></li>
-      <li><a href="#">KONTAKT</a></li>
+      <li><a href="#kontakt">KONTAKT</a></li>
     </ul>
     <label for="nav-toggle" class="icon-burger">
       <div class="line"></div>
@@ -37,46 +44,31 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
   <script src="javascript.js"></script>
 
-      <section id="about">
+      <section id="intro">
         <div class="wrapper">
           <div class="container">
-              <h2>ÜBER MICH</h2>
-              <div class="skills"></div>
-              <img src="titelbild.jpg" alt="Titelbild Romina">
+            <h2>ÜBER MICH</h2>
+            <img src="titelbild.jpg" alt="Titelbild">
+            <div class="li">
               <div class="timeline">
-                <div class="outer">
-                  <div class="card">
-                    <div class="info">
-                      <h3 class="title">BSC Wirtschaftsinformatik <br> 2020 - heute</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="info">
-                      <h3 class="title">Projektassistentin <br> 2022 - heute</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="info">
-                      <h3 class="title"> IT Vorort Support <br> 2020 - 2022</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="info">
-                      <h3 class="title">Zugverkehrsleiterin <br> 2018-2020</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="info">
-                      <h3 class="title">Lehre als Kauffrau mit Berufsmaturität <br>2015 - 2018</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                    </div>
-                  </div>
-                </div>
+                <h3>2020-Heute</h3>
+                <p>Bachelor in Wirtschaftsinformatik</p>
+              </div> 
+              <div class="timeline">
+                <h3>2020-Heute</h3>
+                <p>Bachelor in Wirtschaftsinformatik</p>
               </div>
+              <div class="timeline">
+                <h3>2020-Heute</h3>
+                <p>Bachelor in Wirtschaftsinformatik</p>
+              </div>
+              <div class="timeline">
+                <h3>2020-Heute</h3>
+                <p>Bachelor in Wirtschaftsinformatik</p>
+              </div>  
+            </div>
+          </div>
+        </div>    
 
     </section>  
 
@@ -128,36 +120,24 @@
     </section>
     <section id="kontakt">
       <div class="wrapper">
-            <div class="container">
-                <h2>KONTAKT</h2>
-                <div class="skills">
-                  <form action="">
-                  </div>
-                    <div class="half">
-                    <div class="item">
-          <label for="name">NAME</label>
-          <input type="text" id="name">
-        </div>
-        <div class="half">
-          <div class="item">
-            <label for="email">EMAIL</label>
-            <input type="text" id="email">
-          </div>
-          <div class="half">
-            <div class="item">
-              <label for="message">NACHRICHT</label>
-              <textarea name="" id="message" cols="30" rows="10"></textarea>
-            </div>
-            <div class="action">
-              <input type="submit" name="" id="NACHRICHT SENDEN">
-              <input type="RESET" name="" id="zURÜCKSETZTEN">
-            </div>
-            <div class="icons">
-              <a href="" class="GITHUB">GitHub</a>
-            </div>  
-          </div>
-    </form>
-  </section>
+        <div class="container">
+            <h2>KONTAKT</h2>
+            <form id="contact-form">
+              <input type="hidden" name="contact_number">
+              <label>NAME</label>
+              <input type="text" name="user_name">
+              <label>EMAIL</label>
+              <input type="email" name="user_email">
+              <label>NACHRICHT</label>
+              <textarea name="message"></textarea>
+              <input type="submit" value="Send">
+          </form>
+      </div>
+    </div> 
+
+
+
+    </section>
   </main>
     </section>
     <footer>
