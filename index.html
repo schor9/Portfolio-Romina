@@ -6,14 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Romina Schöpfer</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            // https://dashboard.emailjs.com/admin/account
-            emailjs.init('ekiauM9eOgLz_Acse');
-        })();
-    </script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
 
 </head>
 <body>
@@ -23,7 +18,7 @@
     <div class="logo"></div>
     <ul class="links">
       <li><a href="#">HOME</a></li>
-      <li><a href="#about">ÜBER MICH</a></li>
+      <li><a href="#intro">ÜBER MICH</a></li>
       <li><a href="#skills">SKILLS</a></li>
       <li><a href="#kontakt">KONTAKT</a></li>
     </ul>
@@ -33,9 +28,7 @@
       <div class="line"></div>
     </label>
   </nav>
-  
-
-
+  <!--Source: https://tobiasahlin.com/moving-letters/-->
   <h1 class="ml9">
     <span class="text-wrapper">
       <span class="letters">ROMINA SCHÖPFER</span>
@@ -43,7 +36,7 @@
   </h1>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
   <script src="javascript.js"></script>
-
+<!--Source: https://codepen.io/snookca/full/qYoLaq-->
       <section id="intro">
         <div class="wrapper">
           <div class="container">
@@ -53,25 +46,33 @@
               <div class="timeline">
                 <h3>2020-Heute</h3>
                 <p>Bachelor in Wirtschaftsinformatik</p>
+                <p>Berner Fachhochschule</p>
               </div> 
               <div class="timeline">
-                <h3>2020-Heute</h3>
-                <p>Bachelor in Wirtschaftsinformatik</p>
+                <h3>2018-2020</h3>
+                <p>Zugverkehrsleiterin</p>
+                <p>BLS AG</p>
               </div>
               <div class="timeline">
-                <h3>2020-Heute</h3>
-                <p>Bachelor in Wirtschaftsinformatik</p>
+                <h3>2015-2018</h3>
+                <p>Lehre als Kauffrau mit Berufsmaturität</p>
+                <p>Login Berufsbildung AG</p>
               </div>
               <div class="timeline">
-                <h3>2020-Heute</h3>
-                <p>Bachelor in Wirtschaftsinformatik</p>
-              </div>  
+                <h3>2012-1015</h3>
+                <p>Sekundarschule</p>
+                <p>Orientierungsschule Tafers</p>
+              </div>
+              <div class="timeline">
+                <h3>2006-2012</h3>
+                <p>Primarschule St. Antoni</p>
+              </div>    
             </div>
           </div>
         </div>    
 
     </section>  
-
+<!--Source: https://dev.to/shantanu_jana/animated-skills-bar-html-and-css-1fbl-->
     <section id="skills">
         <div class="wrapper">
             <div class="container">
@@ -122,27 +123,25 @@
       <div class="wrapper">
         <div class="container">
             <h2>KONTAKT</h2>
-            <form id="contact-form">
-              <input type="hidden" name="contact_number">
-              <label>NAME</label>
-              <input type="text" name="user_name">
-              <label>EMAIL</label>
-              <input type="email" name="user_email">
-              <label>NACHRICHT</label>
-              <textarea name="message"></textarea>
-              <input type="submit" value="Send">
+            <form action="https://api.web3forms.com/submit" method="POST">
+
+              <input type="hidden" name="access_key" value="8287b351-71a6-46eb-b3c8-b64a47c67e0e">
+          
+              <input type="text" name="name" required>NAME</input>
+              <input type="email" name="email" required>E-MAIL</input>
+              <textarea name="message" required></textarea>NACHRICHT</input>
+              <input type="hidden" name="redirect" value="https://web3forms.com/success">
+              <button type="submit">SENDEN</button>
           </form>
       </div>
     </div> 
-
-
-
+    <script src="javascript.js"></script>
     </section>
   </main>
     </section>
     <footer>
-      <p>fjjf</p>
+      <div id="map"></div>
+     
     </footer>
-
-
+    
    

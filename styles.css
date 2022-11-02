@@ -282,17 +282,15 @@ section {
 }
 
 .timeline {
-  border-top: 2px dashed;
+  border-top: 4px solid;
   border-color: #010326 !important;
   margin:0; padding: 30px;
-  counter-increment: section;
   position: relative;
 }
 
 
 
 .timeline:nth-child(even):before {
-  content: counter(section);
   right: 100%; 
   margin-right: -20px;
   position: absolute;
@@ -307,7 +305,6 @@ section {
 }
 
 .timeline:nth-child(odd):before {
-  content: counter(section);
   left: 100%; 
   margin-left: -20px;
   position: absolute;
@@ -324,7 +321,7 @@ section {
 
 
 .timeline:nth-child(even) {
-  border-left: 2px dashed;
+  border-left: 4px solid;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
   margin-right: 30px; 
@@ -332,7 +329,7 @@ section {
 }
 
 .timeline:nth-child(odd) {
-  border-right: 2px dashed;
+  border-right: 4px solid;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
   margin-left: 30px; 
@@ -348,4 +345,10 @@ section {
 .timeline:last-child {
   border-bottom-right-radius:0;
   border-bottom-left-radius:0;
+}
+
+/*Footer */
+#map {
+  height: 300px;
+  z-index: 60;
 }
