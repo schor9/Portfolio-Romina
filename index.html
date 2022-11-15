@@ -9,7 +9,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
-
+ 
 </head>
 <body>
 <main>
@@ -20,6 +20,7 @@
       <li><a href="#">HOME</a></li>
       <li><a href="#intro">ÜBER MICH</a></li>
       <li><a href="#skills">SKILLS</a></li>
+      <li><a href="#hobbies">HOBBIES</a></li>
       <li><a href="#kontakt">KONTAKT</a></li>
     </ul>
     <label for="nav-toggle" class="icon-burger">
@@ -41,33 +42,51 @@
         <div class="wrapper">
           <div class="container">
             <h2>ÜBER MICH</h2>
-            <img src="titelbild.jpg" alt="Titelbild">
-            <div class="li">
-              <div class="timeline">
-                <h3>2020-Heute</h3>
-                <p>Bachelor in Wirtschaftsinformatik</p>
-                <p>Berner Fachhochschule</p>
-              </div> 
-              <div class="timeline">
-                <h3>2018-2020</h3>
-                <p>Zugverkehrsleiterin</p>
-                <p>BLS AG</p>
+            <img src="titelbild.jpg" alt="Titelbild" class="foto">
+            <div class="timeline">
+
+              <div class="time left">
+                <div class="content">
+                  <h3>2020-Heute</h3>
+                  <h4>Bachelor in Wirtschaftsinformatik</h4>
+                  <p>BFH</p>
+                </div>
               </div>
-              <div class="timeline">
-                <h3>2015-2018</h3>
-                <p>Lehre als Kauffrau mit Berufsmaturität</p>
-                <p>Login Berufsbildung AG</p>
+            
+              <div class="time right">
+                <div class="content">
+                  <h3>2018-2020</h3>
+                  <h4>Zugverkehrsleiterin</h4>
+                  <p>BLS AG</p>
+                </div>
               </div>
-              <div class="timeline">
-                <h3>2012-1015</h3>
-                <p>Sekundarschule</p>
-                <p>Orientierungsschule Tafers</p>
+
+              <div class="time left">
+                <div class="content">
+                  <h3>2015-2018</h3>
+                  <h4>Lehre als Kauffrau mit BM</h4> 
+                  <p>Login Berufsbildung AG</p>
+                </div>
               </div>
-              <div class="timeline">
-                <h3>2006-2012</h3>
-                <p>Primarschule St. Antoni</p>
-              </div>    
+
+                          
+              <div class="time right">
+                <div class="content">
+                  <h3>2012-2015</h3>
+                  <h4>Orientierungsschule</h4>
+                  <p>OS Tafers</p>
+                </div>
+              </div>
+
+              <div class="time left">
+                <div class="content">
+                  <h3>2006-2012</h3>
+                  <h4>Primarschule St. Antoni</h4>
+                </div>
+              </div>
+            
             </div>
+
           </div>
         </div>    
 
@@ -114,31 +133,85 @@
                     </div>
                     <div class="bar">
                        <div id="python-bar"></div>
+                      </div>
                     </div>
                   </div>
             </div>
         </div>
     </section>
+    <section id="hobbies">
+      <div class="wrapper">
+        <div class="container">
+          <h2>FREIZEIT</h2>
+          <div class="hobbies">
+          
+            <div class="gallery-wrap">
+              <div class="item item-1"></div>
+              <div class="item item-2"></div>
+              <div class="item item-3"></div>
+              <div class="item item-4"></div>
+              <div class="item item-5"></div>
+            </div>
+           </div>
+            
+            
+        </div>
+      </div>
+    </section>
+    
     <section id="kontakt">
       <div class="wrapper">
         <div class="container">
             <h2>KONTAKT</h2>
-            <form action="https://api.web3forms.com/submit" method="POST">
-
-              <input type="hidden" name="access_key" value="8287b351-71a6-46eb-b3c8-b64a47c67e0e">
-          
-              <input type="text" name="name" required>NAME</input>
-              <input type="email" name="email" required>E-MAIL</input>
-              <textarea name="message" required></textarea>NACHRICHT</input>
-              <input type="hidden" name="redirect" value="https://web3forms.com/success">
-              <button type="submit">SENDEN</button>
-          </form>
-      </div>
-    </div> 
-    <script src="javascript.js"></script>
+              <form action="https://api.web3forms.com/submit" method="post">
+                <input type="hidden" name="access_key" value="8287b351-71a6-46eb-b3c8-b64a47c67e0e">                
+                <div class="form-group">
+                  <label for="name">NAME<span class="star">*</span></label>
+                  <input
+                    type="text"
+                    id="name"
+                    class="form-control"
+                    placeholder="DEIN NAME"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="subject"
+                    >BETREFF&nbsp;<span class="optional">(OPTIONAL)</span></label>
+                  <input
+                    type="text"
+                    id="subject"
+                    class="form-control"
+                    placeholder="DEIN BETREFF"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">EMAIL<span class="star">*</span></label>
+                  <input
+                    type="email"
+                    id="email"
+                    class="form-control"
+                    placeholder="DEINE EMAILADRESSE"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="message">NACHRICHT<span class="star">*</span></label>
+                  <textarea
+                    id="message"
+                    class="form-control"
+                    placeholder="DEINE NACHRICHT"
+                    required
+                    cols="30"
+                    rows="10"
+                  ></textarea>
+                </div>
+                <button class="submit-btn">SENDEN</button>
+              </form>
+        </div>
+      </div>      
     </section>
   </main>
-    </section>
     <footer>
       <div id="map"></div>
      
