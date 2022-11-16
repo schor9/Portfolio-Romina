@@ -494,5 +494,6 @@ section {
 
 /*Footer */
 #map{
-
+  height: 100vh;
+  weight: 100%;
 }

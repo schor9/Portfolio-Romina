@@ -18,7 +18,7 @@ anime.timeline({loop: true})
   });
 
 
-  var map = L.map('map').setView([600670,199655], 4);
+  var map = L.map('map').setView([600670,199655], 17);
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
