@@ -166,7 +166,7 @@ nav .icon-burger .line {
   line-height: 1em;
 }
 
-@media screen and (max-width: 366px) {
+@media screen and (max-width: 610px) {
 .ml9{
   width: auto;
   justify-content: center;
@@ -231,6 +231,7 @@ section {
 .skills:not(:last-child){
   margin-bottom: 30px;
 }
+
 
 #html-bar{
   animation: html-fill 2s forwards;
@@ -309,6 +310,7 @@ section {
   position: relative;
   background-color: inherit;
   width: 50%;
+  margin-bottom: 30px;
   
 }
 
@@ -436,6 +438,7 @@ section {
 
 .hobbies {
   margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 .gallery-wrap {
@@ -451,6 +454,7 @@ section {
   background-size: cover;
   background-repeat: none;
   transition: flex 0.8s ease;
+
 }
 .item:hover {
   flex: 7;
@@ -487,13 +491,10 @@ section {
 
 /*Kontaktformular*/
 
-
-
-
-
+#map{
+  height: 50vh;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 
 /*Footer */
-#map{
-  height: 100vh;
-  weight: 100%;
-}

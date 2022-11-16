@@ -18,3 +18,11 @@ anime.timeline({loop: true})
   });
 
 
+
+var map = L.map('map').setView([46.9514, 7.43521], 15);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 23,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+var marker = L.marker([46.9514, 7.43521]).addTo(map);
+marker.bindPopup("Hier findest du mich bei der Arbeit").openPopup();
