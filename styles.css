@@ -2,12 +2,12 @@
 
 html{
   scroll-behavior: smooth;
+  color: #6FBFBF;
+  background-color: #010326;
 }
 * {
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
-  background-color: #010326;
-  color: #6FBFBF;
   text-align: center;
 
   
@@ -176,7 +176,6 @@ nav .icon-burger .line {
 }
 
 /*Skills*/
-
 .wrapper{
   position: center;
   display: flex;
@@ -202,7 +201,7 @@ section {
 
 .container *{
   font-weight: 500;
-  background-color: #393E59;
+
   position: center;
   border-radius: 10px;
 
@@ -430,8 +429,9 @@ section {
   .right {
     left: 0%;
   }
-
 }
+
+
 
 
 /*Hobbies*/
@@ -460,16 +460,16 @@ section {
   flex: 7;
 }
 .item-1 {
-  background-image: url('berge.jpg');
+  background-image: url('img/berge.jpg');
 }
 .item-2 {
-  background-image: url('freund.jpg');
+  background-image: url('img/freund.jpg');
 }
 .item-3 {
-  background-image: url('familie.jpg');
+  background-image: url('img/familie.jpg');
 }
 .item-4 {
-  background-image: url('winter.jpg');
+  background-image: url('img/winter.jpg');
 }
 .item-5 {
   background-image: url('https://images.unsplash.com/photo-1486140525285-12e658d9ac0f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80');
@@ -490,7 +490,85 @@ section {
 
 
 /*Kontaktformular*/
+.form {
+  width: 90vw;
+  margin: 3rem auto;
+}
+.form__row {
+  display: flex;
+  justify-content: space-between;
 
+}
+@media (max-width: 40rem) {
+  .form__row {
+    flex-direction: column;
+ }
+}
+.form__row:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.form__group {
+  width: 49%;
+
+}
+@media (max-width: 40rem) {
+  .form__group {
+    width: 100%;
+ }
+}
+.form__input {
+  padding: 1.5rem 2rem;
+  border-radius: 10;
+  background-color: #010326;
+  color: #6FBFBF;
+  border: none;
+  width: 100%;
+  display: block;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  
+}
+.form__input:focus {
+  outline: none;
+  border-bottom: 3px solid #6FBFBF;
+}
+.form__input::-webkit-input-placeholder {
+  color: #6FBFBF;
+}
+.form__label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all 0.3s;
+}
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem);
+}
+.form__textarea {
+  padding: 1.5rem 2rem;
+  border-radius: 10;
+  background-color: #010326;
+  color: #6FBFBF;
+  border: none;
+  width: 100%;
+  display: block;
+  min-height: 18rem;
+}
+.form__textarea:focus {
+  outline: none;
+}
+button {
+  justify-content: center;
+  padding: 1.5rem 2rem;
+  border: none;
+  background-color: #6FBFBF;
+  color: #010326;
+  text-transform: uppercase;
+}
 #map{
   height: 50vh;
   margin-top: 30px;
@@ -498,3 +576,7 @@ section {
 }
 
 /*Footer */
+.passion{
+  width: 3.5vh;
+  border-radius: none;
+}
