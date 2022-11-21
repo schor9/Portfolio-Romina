@@ -4,6 +4,8 @@ html{
   scroll-behavior: smooth;
   color: #6FBFBF;
   background-color: #010326;
+  text-transform: uppercase;
+  hyphens: auto;
 }
 * {
   box-sizing: border-box;
@@ -30,6 +32,9 @@ h2{
   text-align: center;
   font-size: 33px;
   font-weight: bold;
+}
+h4{
+
 }
 
 img {
@@ -68,10 +73,13 @@ nav .links {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+  background-color: #010326;
+  opacity: 0.75;
 }
 nav .links li {
 	list-style: none;
 }
+
 nav .links a {
 	display: block;
 	padding: 0.75em;
@@ -196,12 +204,14 @@ section {
   position: center;
   margin-top: 3em;
   margin-bottom: 3em;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 2em;
 } 
 
 
 .container *{
   font-weight: 500;
-
   position: center;
   border-radius: 10px;
 
@@ -292,7 +302,7 @@ section {
 
 /* The actual timeline (the vertical ruler) */
 .timeline::after {
-  content: '';
+  content:'';
   position: absolute;
   width: 6px;
   background-color: #010326;
@@ -300,7 +310,6 @@ section {
   bottom: 0;
   left: 50%;
   margin-left: -3px;
-  
 }
 
 /* Container around content */
@@ -312,6 +321,7 @@ section {
   margin-bottom: 30px;
   
 }
+
 
 /* The circles on the timeline */
 .time::after {
@@ -337,34 +347,6 @@ section {
   left: 50%;
 }
 
-/* Add arrows to the left container (pointing right) */
-.left::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  right: 30px;
-  border: medium solid #010326;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent #010326;
-}
-
-/* Add arrows to the right container (pointing left) */
-.right::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  left: 30px;
-  border: medium solid #010326;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent #010326 transparent transparent;
-}
-
 /* Fix the circle for containers on the right side */
 .right::after {
   left: -16px;
@@ -372,29 +354,12 @@ section {
 
 /* The actual content */
 .content {
-  padding: 20px 30px;
+  padding: 1rem 1rem;
   background-color: #010326;
   position: relative;
   border-radius: 6px;
 }
-.content p{
-  background-color: #010326;
-  font-size: 18px;
-}
-.content h3{
-  background-color: #010326;
-  font-size: 30px;
-}
-.content h4{
-  background-color: #010326;
-  font-size: 23px;
-}
-.content li{
-  background-color: #010326;
-}
-.content ul{
-  background-color: #010326;
-}
+
 
 
 
@@ -497,6 +462,7 @@ section {
 .form__row {
   display: flex;
   justify-content: space-between;
+  margin-right: 2em;
 
 }
 @media (max-width: 40rem) {
@@ -517,7 +483,7 @@ section {
  }
 }
 .form__input {
-  padding: 1.5rem 2rem;
+  padding: 2em;
   border-radius: 10;
   background-color: #010326;
   color: #6FBFBF;
@@ -526,6 +492,7 @@ section {
   display: block;
   transition: all 0.3s;
   text-transform: uppercase;
+  margin-right: 2em;
   
 }
 .form__input:focus {
@@ -542,11 +509,13 @@ section {
   margin-top: 0.7rem;
   display: block;
   transition: all 0.3s;
+  text-transform: uppercase;
 }
 .form__input:placeholder-shown + .form__label {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-4rem);
+
 }
 .form__textarea {
   padding: 1.5rem 2rem;
@@ -579,4 +548,7 @@ button {
 .passion{
   width: 3.5vh;
   border-radius: none;
+}
+footer{
+  margin-bottom: 2em;
 }

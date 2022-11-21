@@ -20,7 +20,7 @@
       <li><a href="#">HOME</a></li>
       <li><a href="#intro">ÜBER MICH</a></li>
       <li><a href="#skills">SKILLS</a></li>
-      <li><a href="#hobbies">HOBBIES</a></li>
+      <li><a href="#hobbies">FREIZEIT</a></li>
       <li><a href="#kontakt">KONTAKT</a></li>
     </ul>
     <label for="nav-toggle" class="icon-burger">
@@ -44,53 +44,63 @@
             <h2>ÜBER MICH</h2>
             <img src="img/titelbild.jpg" alt="Titelbild" class="foto">
             <div class="timeline">
-
               <div class="time left">
+                <div data-aos="flip-left">
                 <div class="content">
                   <h3>2020-Heute</h3>
                   <h4>Bachelor in Wirtschaftsinformatik</h4>
                   <p>BFH</p>
                 </div>
               </div>
+            </div>
             
               <div class="time right">
+                <div data-aos="flip-right">
                 <div class="content">
                   <h3>2018-2020</h3>
                   <h4>Zugverkehrsleiterin</h4>
                   <p>BLS AG</p>
                 </div>
               </div>
+              </div>
 
               <div class="time left">
+                <div data-aos="flip-left">
                 <div class="content">
                   <h3>2015-2018</h3>
                   <h4>Lehre als Kauffrau mit BM</h4> 
                   <p>Login Berufsbildung AG</p>
                 </div>
+                </div>
               </div>
 
                           
               <div class="time right">
+                <div data-aos="flip-right">
                 <div class="content">
                   <h3>2012-2015</h3>
                   <h4>Orientierungsschule</h4>
                   <p>OS Tafers</p>
                 </div>
+                </div>
               </div>
 
               <div class="time left">
+                <div data-aos="flip-left">
                 <div class="content">
                   <h3>2006-2012</h3>
                   <h4>Primarschule St. Antoni</h4>
                 </div>
+                </div>
               </div>
-            
             </div>
 
           </div>
         </div>    
-
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     </section>  
+
+    
 <!--Source: https://dev.to/shantanu_jana/animated-skills-bar-html-and-css-1fbl-->
     <section id="skills">
         <div class="wrapper">
@@ -170,29 +180,29 @@
                       <div class="form__row">
                         <div class="form__group">
                           <input type="text" class="form__input" placeholder="Full Name" id="f-name" required>
-                          <label for="f-name" class="form__label">Full Name</label>
+                          <label for="f-name" class="form__label">NAME</label>
                         </div>
                         
                         <div class="form__group">
                           <input type="email" class="form__input" placeholder="Email" id="f-email" required>
-                          <label for="f-email" class="form__label">Email</label>
+                          <label for="f-email" class="form__label">EMAIL</label>
                         </div>
                       </div><!-- form-row -->
                       <div class="form__row">         
                         <div class="form__group">
                           <input type="text" class="form__input" placeholder="Subject" id="f-subject" optional>
-                          <label for="f-subject" class="form__label">Subject</label>
+                          <label for="f-subject" class="form__label">BETREFF</label>
                         </div>
                       </div><!-- form-row -->
                       <div class="form__row">
                      
-                          <textarea name="message" id="f-message" class="form__textarea"></textarea>
+                          <textarea name="message" id="f-message" class="form__textarea">DEINE NACHRICHT</textarea>
                 
                       </div>
                       <div class="form__row">
                         <div class="form-group">
                           <button class="btn btn--primary">
-                            Send Message
+                            SENDEN
                           </button>
                         </div>
                       </div>
