@@ -1,0 +1,103 @@
+/*Skills*/
+.wrapper{
+    position: center;
+    display: flex;
+    justify-content: center;
+    margin-left: 5px;
+    margin-right: 5px;
+  
+    
+  }
+  section {
+    scroll-margin: 7em;
+  }
+  
+  .container{
+    width: 95vw;
+    background-color: #393E59;
+    border-radius: 10px;
+    position: center;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 2em;
+  } 
+  
+  
+  .container *{
+    font-weight: 500;
+    position: center;
+    border-radius: 10px;
+  
+  }
+  
+  .details{
+    width: 100%;
+    display: flex;  
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .bar{
+    position: relative;
+    border: 2px solid #6FBFBF;
+    border-radius: 20px;
+  
+  }
+  .bar div{
+    position: relative;
+    width: 0;
+    height: 9px;
+    border-radius: 10px;
+    background-color: #6FBFBF;
+  }
+  
+  .skills:not(:last-child){
+    margin-bottom: 30px;
+  }
+  
+  
+  #html-bar{
+    animation: html-fill 2s forwards;
+  }
+  @keyframes html-fill{ 
+    100%{
+        width: 80%;
+    }
+  }
+  
+  #css-bar{
+    animation: css-fill 2s forwards;
+  }
+  @keyframes css-fill{
+    100%{
+        width: 75%;
+    }
+  }
+  
+  #javascript-bar{
+    animation: javascript-fill 2s forwards;
+  }
+  @keyframes javascript-fill{
+    100%{
+        width: 50%;
+    }
+  }
+  
+  #angular-bar{
+    animation: angular-fill 2s forwards;
+  }
+  @keyframes angular-fill{
+    100%{
+        width: 75%;
+    }
+  }
+  
+  #python-bar{
+    animation: python-fill 2s forwards;
+  }
+  @keyframes python-fill{
+    100%{
+        width: 60%;
+    }
+  }
