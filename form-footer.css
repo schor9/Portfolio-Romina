@@ -74,6 +74,11 @@
   .form__textarea:focus {
     outline: none;
   }
+
+  .form__textarea::-webkit-input-placeholder {
+    color: #6FBFBF;
+  }
+
   button {
     justify-content: center;
     padding: 1.5rem 2rem;
@@ -92,6 +97,8 @@
   .passion{
     width: 3.5vh;
     border-radius: none;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
   footer{
     margin-bottom: 2em;
